@@ -28,6 +28,11 @@ docker container ls
 docker exec -it $CONTAINER_ID /app/goapp bash
 ```
 
+run docker-compose up for create mysql / redis
+```
+docker-compose up
+```
+
 docker step 4: push 
 
 ```
