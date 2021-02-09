@@ -27,7 +27,7 @@ How to see the log
 ```
 $ docker container ls
 $ docker exec -it $CONTAINER_ID /app/goapp bash
-``
+```
 
 docker step 4: push 
 
