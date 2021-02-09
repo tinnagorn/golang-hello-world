@@ -35,30 +35,4 @@ docker step 4: push
 docker push tintinktb20/hello-docker:dev 
 ```
 
-
 check result in https://hub.docker.com/repository/docker/tintinktb20/hello-docker
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-step 4: run docker-compose up for create mysql / redis
-
-```
-$ docker-compose up
-```
-
-step 5: run docker-compose up for create mysql / redis
-
-```
-$ docker-compose up
-```
