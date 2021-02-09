@@ -6,7 +6,6 @@ docker step 1: build
 docker build -t tintinktb20/hello-docker:dev .
 ```
 
-
 and check image status 
 ```
 docker image ls | grep hello-docker
@@ -20,13 +19,13 @@ docker run -d -p 8081:1323 tintinktb20/hello-docker:dev
 docker step 3: test this service use curl
 
 ```
-$ curl --location --request GET 'http://localhost:8081/hello-world'
+curl --location --request GET 'http://localhost:8081/hello-world'
 ```
 
 How to see the log
 ```
-$ docker container ls
-$ docker exec -it $CONTAINER_ID /app/goapp bash
+docker container ls
+docker exec -it $CONTAINER_ID /app/goapp bash
 ```
 
 docker step 4: push 
