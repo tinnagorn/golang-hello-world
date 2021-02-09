@@ -23,7 +23,7 @@ func NewEcho() *echo.Echo {
 	e.HideBanner = true
 	e.HidePort = true
 
-	m := middleware.New("hello-world")
+	m := middleware.New(viper.GetString("app.name"))
 	m.Skipper = func(c echo.Context) bool {
 		return c.Path() == "/builds" || c.Path() == "/health"
 	}
@@ -39,8 +39,8 @@ func NewEcho() *echo.Echo {
 
 func Runs(router *echo.Echo) {
 	log.Printf("starting %s", viper.GetString("app.name"))
-	log.Printf("application serve at port %s", "1323")
-	log.Println(router.Start(":1323"))
+	log.Printf("application serve at port %s", viper.GetString("app.port"))
+	log.Println(router.Start(":" + viper.GetString("app.port")))
 }
 
 func Shutdown(router *echo.Echo) {
